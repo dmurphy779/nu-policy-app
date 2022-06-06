@@ -4,27 +4,22 @@
   "info": {
     "singularName": "audience",
     "pluralName": "audiences",
-    "displayName": "Audience"
+    "displayName": "Audience",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Audience": {
-      "type": "enumeration",
-      "enum": [
-        "Staff",
-        "Faculty",
-        "Students",
-        "Board of Trustees"
-      ]
-    },
     "policies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::policy.policy",
       "inversedBy": "audiences"
+    },
+    "Audience": {
+      "type": "string"
     }
   }
 }

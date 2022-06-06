@@ -89,7 +89,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::audience.audience",
-      "inversedBy": "policies"
+      "mappedBy": "policies"
     }
   }
 }
