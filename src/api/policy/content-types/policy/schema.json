@@ -58,22 +58,22 @@
     },
     "Member_2": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "member.member-vote"
     },
     "Member_3": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "member.member-vote"
     },
     "Member_4": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "member.member-vote"
     },
     "Member_5": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "member.member-vote"
     },
     "Policy_Notes": {
