@@ -13,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "Date_Submitted": {
       "required": true,
@@ -76,6 +78,12 @@
     },
     "Policy_Notes": {
       "type": "richtext"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "policies"
     }
   }
 }
