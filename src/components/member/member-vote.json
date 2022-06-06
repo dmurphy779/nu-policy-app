@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_member_member_votes",
+  "info": {
+    "displayName": "Member Vote",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Member_Decision": {
+      "type": "enumeration",
+      "enum": [
+        "Approved",
+        "Denied"
+      ]
+    },
+    "Member_Name": {
+      "type": "string"
+    }
+  }
+}

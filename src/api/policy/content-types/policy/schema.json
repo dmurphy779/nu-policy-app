@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "policies",
+  "info": {
+    "singularName": "policy",
+    "pluralName": "policies",
+    "displayName": "Policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Date_Submitted": {
+      "required": true,
+      "type": "date",
+      "default": "2022-06-02"
+    },
+    "Date_Adjudicated": {
+      "type": "date",
+      "default": "2022-06-02"
+    },
+    "Committee_Status": {
+      "type": "enumeration",
+      "enum": [
+        "In Review",
+        "Pending Cabinet Decision",
+        "Pending Committee Final Approval"
+      ],
+      "required": true,
+      "default": "In Review"
+    },
+    "Cabinet_Decision": {
+      "type": "enumeration",
+      "enum": [
+        "Approved",
+        "Denied",
+        "Pending Revisions"
+      ]
+    },
+    "Policy_Web_URL": {
+      "type": "string"
+    },
+    "Policy_Archive_URL": {
+      "type": "string"
+    },
+    "Member_1": {
+      "displayName": "Member Vote",
+      "type": "component",
+      "repeatable": false,
+      "component": "member.member-vote"
+    },
+    "Member_2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "member.member-vote"
+    },
+    "Member_3": {
+      "type": "component",
+      "repeatable": true,
+      "component": "member.member-vote"
+    },
+    "Member_4": {
+      "type": "component",
+      "repeatable": true,
+      "component": "member.member-vote"
+    },
+    "Member_5": {
+      "type": "component",
+      "repeatable": true,
+      "component": "member.member-vote"
+    },
+    "Policy_Notes": {
+      "type": "richtext"
+    }
+  }
+}
