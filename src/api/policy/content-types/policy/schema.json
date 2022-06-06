@@ -84,6 +84,12 @@
       "relation": "manyToOne",
       "target": "api::department.department",
       "inversedBy": "policies"
+    },
+    "audiences": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::audience.audience",
+      "inversedBy": "policies"
     }
   }
 }

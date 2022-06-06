@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audiences",
+  "info": {
+    "singularName": "audience",
+    "pluralName": "audiences",
+    "displayName": "Audience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Audience": {
+      "type": "enumeration",
+      "enum": [
+        "Staff",
+        "Faculty",
+        "Students",
+        "Board of Trustees"
+      ]
+    },
+    "policies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::policy.policy",
+      "inversedBy": "audiences"
+    }
+  }
+}
