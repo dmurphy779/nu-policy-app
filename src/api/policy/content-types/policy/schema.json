@@ -90,6 +90,9 @@
       "relation": "manyToMany",
       "target": "api::audience.audience",
       "mappedBy": "policies"
+    },
+    "Date_Last_Updated": {
+      "type": "date"
     }
   }
 }
