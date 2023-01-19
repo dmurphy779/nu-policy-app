@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * audience router.
+ * audience router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;

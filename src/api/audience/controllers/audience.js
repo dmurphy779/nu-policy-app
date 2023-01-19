@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- *  audience controller
+ * audience controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;

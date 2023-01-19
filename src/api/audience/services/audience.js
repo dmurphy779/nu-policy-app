@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * audience service.
+ * audience service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;

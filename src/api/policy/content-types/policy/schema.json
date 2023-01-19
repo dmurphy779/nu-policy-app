@@ -44,12 +44,6 @@
         "Pending Revisions"
       ]
     },
-    "Policy_Web_URL": {
-      "type": "string"
-    },
-    "Policy_Archive_URL": {
-      "type": "string"
-    },
     "Member_1": {
       "displayName": "Member Vote",
       "type": "component",
@@ -61,38 +55,39 @@
       "repeatable": false,
       "component": "member.member-vote"
     },
-    "Member_3": {
-      "type": "component",
-      "repeatable": false,
-      "component": "member.member-vote"
-    },
-    "Member_4": {
-      "type": "component",
-      "repeatable": false,
-      "component": "member.member-vote"
-    },
-    "Member_5": {
-      "type": "component",
-      "repeatable": false,
-      "component": "member.member-vote"
-    },
-    "Policy_Notes": {
+    "Purpose_Statement": {
       "type": "richtext"
     },
-    "department": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::department.department",
-      "inversedBy": "policies"
+    "The_Policy": {
+      "type": "richtext"
     },
-    "audiences": {
+    "Procedures": {
+      "type": "richtext"
+    },
+    "Related_Policies_References": {
+      "type": "richtext"
+    },
+    "Policy_History": {
+      "type": "richtext"
+    },
+    "Appendix": {
+      "type": "richtext"
+    },
+    "Category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "Audiences": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::audience.audience",
-      "mappedBy": "policies"
+      "inversedBy": "policies"
     },
-    "Date_Last_Updated": {
-      "type": "date"
+    "Cabinet_Approval": {
+      "type": "component",
+      "repeatable": false,
+      "component": "member.member-vote"
     }
   }
 }
