@@ -4,7 +4,8 @@
   "info": {
     "singularName": "audience",
     "pluralName": "audiences",
-    "displayName": "Audience"
+    "displayName": "Audience",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "Audience": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "policies": {
       "type": "relation",

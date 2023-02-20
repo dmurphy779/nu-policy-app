@@ -19,19 +19,19 @@
     },
     "Date_Submitted": {
       "required": true,
-      "type": "date",
-      "default": "2022-06-02"
+      "type": "date"
     },
     "Date_Adjudicated": {
       "type": "date",
-      "default": "2022-06-02"
+      "required": true
     },
     "Committee_Status": {
       "type": "enumeration",
       "enum": [
         "In Review",
         "Pending Cabinet Decision",
-        "Pending Committee Final Approval"
+        "Pending Committee Final Approval",
+        "Approved"
       ],
       "required": true,
       "default": "In Review"
@@ -39,27 +39,34 @@
     "Cabinet_Decision": {
       "type": "enumeration",
       "enum": [
-        "Approved",
+        "Not yet sent to Cabinet",
         "Denied",
-        "Pending Revisions"
+        "Pending Revisions",
+        "Approved (Pre-existing policy)",
+        "Approved (Policy Update)",
+        "Approved (New Policy)"
       ]
     },
     "Member_1": {
       "displayName": "Member Vote",
       "type": "component",
       "repeatable": false,
-      "component": "member.member-vote"
+      "component": "member.member-vote",
+      "required": true
     },
     "Member_2": {
       "type": "component",
       "repeatable": false,
-      "component": "member.member-vote"
+      "component": "member.member-vote",
+      "required": true
     },
     "Purpose_Statement": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "The_Policy": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Procedures": {
       "type": "richtext"
@@ -73,11 +80,6 @@
     "Appendix": {
       "type": "richtext"
     },
-    "Category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
     "Audiences": {
       "type": "relation",
       "relation": "manyToMany",
@@ -87,7 +89,13 @@
     "Cabinet_Approval": {
       "type": "component",
       "repeatable": false,
-      "component": "member.member-vote"
+      "component": "member.member-vote",
+      "required": true
+    },
+    "Department": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::department.department"
     }
   }
 }
