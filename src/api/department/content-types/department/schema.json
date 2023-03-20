@@ -16,6 +16,12 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "policies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::policy.policy",
+      "mappedBy": "department"
     }
   }
 }

@@ -36,17 +36,6 @@
       "required": true,
       "default": "In Review"
     },
-    "Cabinet_Decision": {
-      "type": "enumeration",
-      "enum": [
-        "Not yet sent to Cabinet",
-        "Denied",
-        "Pending Revisions",
-        "Approved (Pre-existing policy)",
-        "Approved (Policy Update)",
-        "Approved (New Policy)"
-      ]
-    },
     "Member_1": {
       "displayName": "Member Vote",
       "type": "component",
@@ -92,10 +81,16 @@
       "component": "member.member-vote",
       "required": true
     },
-    "Department": {
+    "Slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "Title"
+    },
+    "department": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::department.department"
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "policies"
     }
   }
 }
