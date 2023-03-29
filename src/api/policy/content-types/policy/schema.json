@@ -79,7 +79,7 @@
       "type": "component",
       "repeatable": false,
       "component": "member.member-vote",
-      "required": true
+      "required": false
     },
     "Slug": {
       "type": "uid",
@@ -91,6 +91,10 @@
       "relation": "manyToOne",
       "target": "api::department.department",
       "inversedBy": "policies"
+    },
+    "PreExisting_Policy": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
