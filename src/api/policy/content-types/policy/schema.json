@@ -104,7 +104,8 @@
     "Dept_Head_Approval": {
       "type": "component",
       "repeatable": true,
-      "component": "member.member-vote"
+      "component": "member.member-vote",
+      "required": true
     }
   }
 }
