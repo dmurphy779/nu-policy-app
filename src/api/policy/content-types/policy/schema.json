@@ -103,7 +103,7 @@
     },
     "Dept_Head_Approval": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "member.member-vote",
       "required": true
     }
