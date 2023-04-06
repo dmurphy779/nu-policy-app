@@ -95,6 +95,16 @@
     "PreExisting_Policy": {
       "type": "boolean",
       "default": false
+    },
+    "Policy_ID": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Dept_Head_Approval": {
+      "type": "component",
+      "repeatable": true,
+      "component": "member.member-vote"
     }
   }
 }
